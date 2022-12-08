@@ -5,7 +5,7 @@ public class PoligonoRegular implements Figura{
     private int numeroDeLados;
 
     public PoligonoRegular(int numeroDeLados){
-
+        this.numeroDeLados=numeroDeLados;
     }
     public PoligonoRegular(int numeroDeLados, double lado) {
         this.lado = lado;
@@ -24,7 +24,7 @@ public class PoligonoRegular implements Figura{
      double teta;
      double apotema;
 
-     teta= (360/(numeroDeLados * numeroDeLados));
+     teta= Math.toRadians((360.0/(numeroDeLados))/2);
      apotema = lado/(2* Math.tan(teta));
 
      return ((lado*numeroDeLados) * apotema)/2;
